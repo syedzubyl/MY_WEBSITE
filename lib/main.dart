@@ -5,18 +5,13 @@ void main(){
 }
 class Myapp extends StatefulWidget {
   const Myapp({super.key});
-
   @override
   State<Myapp> createState() => _MyappState();
 }
 
 class _MyappState extends State<Myapp> {
    bool _isDarkmode = false;
-  void _toggle(){
-    setState(() {
-      _isDarkmode = !_isDarkmode;
-    });
-  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,4 +24,9 @@ class _MyappState extends State<Myapp> {
       ),
       );
   }
+   void _toggle(){
+     setState(() {
+       _isDarkmode = !_isDarkmode;
+     });
+   }
 }
